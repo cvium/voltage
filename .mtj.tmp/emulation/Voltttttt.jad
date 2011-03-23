@@ -1,6 +1,6 @@
-MIDlet-Jar-Size: 2948
-MIDlet-Jar-URL: Voltttttt.jar
-MIDlet-Name: Voltttttt MIDlet Suite
+MIDlet-Jar-Size: 2949
+MIDlet-Jar-URL: voltage.jar
+MIDlet-Name: Voltage MIDlet Suite
 MIDlet-Vendor: MIDlet Suite Vendor
 MIDlet-Version: 1.0.0
 MicroEdition-Configuration: CLDC-1.0
