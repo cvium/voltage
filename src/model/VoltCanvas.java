@@ -22,9 +22,13 @@ public class VoltCanvas extends Canvas {
 		setFullScreenMode(true);
 	}
 	
+	
 	protected void paint(Graphics g) {
+		// Clears the screen
 		g.setColor(255, 255, 255);
 		g.fillRect(0, 0, getWidth(), getHeight());
+		
+		// Draws a nice small rectangle in the middle of the screen.
 		g.setColor(0,0,0);
 		g.drawRect(80, 100, 80, 120);
 		
@@ -40,7 +44,7 @@ public class VoltCanvas extends Canvas {
 		g.drawString(n1, 80, 220, Graphics.TOP|Graphics.RIGHT);
 		g.drawString(n2, 160, 220, Graphics.TOP|Graphics.LEFT);
 		
-		// Draw a rectancle around the selected component
+		// Draw a rectangle around the selected component
 		switch(selectedComponent) {
 		case 0: 
 			g.drawRoundRect(80 - g.getFont().stringWidth(u1), 
