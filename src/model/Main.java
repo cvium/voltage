@@ -31,7 +31,6 @@ public class Main extends MIDlet implements CommandListener {
 	}
 
 	protected void pauseApp() {
-		// TODO Auto-generated method stub
 		
 	}
 
