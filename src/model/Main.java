@@ -6,17 +6,6 @@ import javax.microedition.midlet.*;
 public class Main extends MIDlet implements CommandListener {
 
 	private Display display;
-	private Form form;
-	
-	private TextField volt1;
-	private TextField volt2;
-	private TextField volt1in;
-	private TextField volt2in;
-	
-	private TextField turn1;
-	private TextField turn2;
-	private TextField turn1in;
-	private TextField turn2in;
 	
 	public Main() {
 	}

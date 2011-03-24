@@ -2,7 +2,7 @@ package model;
 
 import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Graphics;
-import javax.microedition.lcdui.Font;
+//import javax.microedition.lcdui.Font;
 
 public class VoltCanvas extends Canvas {
 
@@ -37,33 +37,32 @@ public class VoltCanvas extends Canvas {
 		String u2 = "U2: " + volt2;
 		String n1 = "N1: " + turn1;
 		String n2 = "N2: " + turn2;
-		String[] info = {u1, u2, n1, n2};
 		
-		g.drawString(u1, 80, 100, Graphics.BOTTOM|Graphics.RIGHT);
-		g.drawString(u2, 160, 100, Graphics.BOTTOM|Graphics.LEFT);
-		g.drawString(n1, 80, 220, Graphics.TOP|Graphics.RIGHT);
-		g.drawString(n2, 160, 220, Graphics.TOP|Graphics.LEFT);
+		g.drawString(u1, 80, 95, Graphics.BOTTOM|Graphics.RIGHT);
+		g.drawString(u2, 160, 95, Graphics.BOTTOM|Graphics.LEFT);
+		g.drawString(n1, 80, 225, Graphics.TOP|Graphics.RIGHT);
+		g.drawString(n2, 160, 225, Graphics.TOP|Graphics.LEFT);
 		
 		// Draw a rectangle around the selected component
 		switch(selectedComponent) {
 		case 0: 
 			g.drawRoundRect(80 - g.getFont().stringWidth(u1), 
-							100 - g.getFont().getHeight(),
+							95 - g.getFont().getHeight(),
 							g.getFont().stringWidth(u1),
 							g.getFont().getHeight(), 3, 3);
 			break;
 		case 1:
-			g.drawRoundRect(160, 100 - g.getFont().getHeight(),
+			g.drawRoundRect(160, 95 - g.getFont().getHeight(),
 					g.getFont().stringWidth(u2),
 					g.getFont().getHeight(), 3, 3);
 			break;
 		case 2:
-			g.drawRoundRect(80 - g.getFont().stringWidth(n1), 220,
+			g.drawRoundRect(80 - g.getFont().stringWidth(n1), 225,
 					g.getFont().stringWidth(n1),
 					g.getFont().getHeight(), 3, 3);
 			break;
 		case 3:
-			g.drawRoundRect(160, 220,
+			g.drawRoundRect(160, 225,
 					g.getFont().stringWidth(n2),
 					g.getFont().getHeight(), 3, 3);
 			break;
@@ -71,8 +70,6 @@ public class VoltCanvas extends Canvas {
 		
 		// Draw arrows in the sides
 		int maxx = getWidth()-1;
-		int maxy = getHeight()-1;
-		int cx = getWidth()>>1;
 		int cy = getHeight()>>1;
 		
 		g.fillTriangle(0,cy,15,cy-5,15,cy+5);
